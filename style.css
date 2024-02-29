@@ -294,6 +294,7 @@ body {
 
 .main-block {
   position: relative;
+  z-index: 1;
 }
 
 .main-block__body {
@@ -316,17 +317,25 @@ body {
   font-weight: 800;
   padding-top: 10rem;
 }
-@media (max-width: 479px) {
-  .main-block__title {
-    font-size: 42px;
-  }
-}
+
 .main-block__text {
   font-size: 20px;
   line-height: calc(30 / 20 * 100%);
   color: #212121;
-  width: 50%;
+  width: 60%;
+  padding: 0rem 1rem;
 }
+
+@media (max-width: 479px) {
+  .main-block__title {
+    font-size: 42px;
+  }
+
+  .main-block__text {
+    width: 80%;
+  }
+}
+
 .main-block__buttons {
   display: flex;
   flex-wrap: wrap;
@@ -381,6 +390,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  z-index: -10;
 }
 
 @media (max-width: 1300px) {
